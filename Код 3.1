@@ -1,17 +1,16 @@
 s = input().strip()
 
-balance = 0  
-remove = 0  
+count = 0
+result = 0
 
 for char in s:
     if char == '(':
-        balance += 1
+        count += 1
     else:
-        if balance > 0:
-            balance -= 1
+        if count > 0:
+            count -= 1
         else:
-            remove += 1
+            result += 1
 
-remove += balance
-print(f"Скобки: '{s}'")
-print(f"Кол-во удалений: {remove}")
+result += count
+print(result)
